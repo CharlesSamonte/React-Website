@@ -146,13 +146,11 @@
 }
 
 #root {
-  display: block;
   margin: 0;
   font-family: 'Open Sans', sans-serif;
 }
 
 body {
-  display: block;
   padding: 0;
   margin: 0;
 }
@@ -164,8 +162,8 @@ section {
 p {
   font-family: 'Opens Sans', sans-serif;
   font-size: 16px;
+  color:var(--color-text-sub)
 }
-
 
 h1,
 h2,

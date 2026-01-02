@@ -1,5 +1,5 @@
 import './App.css'
-import { Navbar, Hero, About,CustomerReview } from './components'
+import { Navbar, Hero, About,CustomerReview, OurServices } from './components'
 
 function App() {
   return (
@@ -8,6 +8,7 @@ function App() {
       <Hero />
       <About />
       <CustomerReview />
+      <OurServices />
     </>
   )
 }

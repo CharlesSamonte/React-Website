@@ -14,21 +14,21 @@
     height: 60px;
     margin-top: 4px;
     margin-bottom: 4px;
-
 }
 
 #navbar .nav-links {
     display: flex;
+    position: relative;
     gap: 20px;
-    height: 100%;
 }
 
 #navbar .nav-links a {
-    height: 100%;
+    height: var(--navbar-height);
     font-weight: 600;
-    text-decoration: none;
     cursor: pointer;
     text-wrap: nowrap;
+    display: flex;
+    align-items: center;
 }
 
 #navbar .nav-links a:hover {

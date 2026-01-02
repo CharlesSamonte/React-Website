@@ -37,9 +37,12 @@
     display: flex;
     flex-direction: column;
 
-    line-height: 0.05;
 }
 
+#hero-section h2,h1{
+    margin: 0;
+    padding: 0;
+}
 /* TYPOGRAPHY */
 #hero-section .hero-text .welcome {
     font-size: clamp(1.2rem, 2vw, 1.8rem);
