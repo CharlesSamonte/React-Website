@@ -3,22 +3,22 @@
      Colors
   ========================== */
 
-  /* Brand */
-  --color-primary: #2563eb;
-  /* blue-600 */
-  --color-primary-hover: #1d4ed8;
-  --color-secondary: #9333ea;
-  --color-accent: #22c55e;
+  --main-backgound-color: #0B0B0C;
+  --section-backgound-color: #111214;
+  --card-backgound-color: rgba(30, 30, 32, 0.75);
 
-  /* Neutrals */
-  --color-bg: #ffffff;
-  --color-bg-muted: #f8fafc;
-  --color-surface: #ffffff;
-  --color-border: #e5e7eb;
+  --color-accent: #C9A24D;
+  --color-secondary: #E0B860;
+  --color-accent-sub: #9F7F36;
+  --gradient-gold: linear-gradient(90deg,
+      #9F7F36 0%,
+      #C9A24D 30%,
+      #E0B860 100%);
 
-  --color-text: #0f172a;
-  --color-text-muted: #64748b;
-  --color-text-inverse: #ffffff;
+  --color-text-heading: #F5F5F5;
+  --color-text: #C9C9C9;
+  --color-text-sub: #8B8B8B;
+
 
   /* Status */
   --color-success: #16a34a;
@@ -35,6 +35,7 @@
     "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
   --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
     "Liberation Mono", "Courier New", monospace;
+
 
   /* Font sizes */
   --text-xs: 0.75rem;
@@ -128,37 +129,60 @@
   --z-toast: 40;
   --z-tooltip: 50;
 
+  /* =========================
+   Fixed Container Heights
+========================== */
+  --navbar-height: 50px;
+
   color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+  color: var(--color-text);
+  background-color: var(--main-backgound-color);
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+}
+
+#root {
+  display: block;
+  margin: 0;
+  font-family: 'Open Sans', sans-serif;
+}
+
+body {
+  display: block;
+  padding: 0;
+  margin: 0;
+}
+
+section {
+  padding: 2% 10%;
+}
+
+p {
+  font-family: 'Opens Sans', sans-serif;
+  font-size: 16px;
+}
+
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Montserrat', sans-serif;
 }
 
 a {
   font-weight: 500;
-  color: #646cff;
   text-decoration: inherit;
 }
 
 a:hover {
-  color: #535bf2;
-}
-
-body {
-  margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
-}
-
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+  color: var(--color-accent);
 }
 
 button {
@@ -180,19 +204,4 @@ button:hover {
 button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
-}
-
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-
-  a:hover {
-    color: #747bff;
-  }
-
-  button {
-    background-color: #f9f9f9;
-  }
 }

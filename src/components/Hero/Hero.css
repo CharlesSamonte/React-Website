@@ -1,0 +1,84 @@
+#hero-section {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+
+    padding: 0 10%;
+    margin: 0;
+
+    background-image: url("../../assets/hero-bg.png");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
+    color: var(--color-text-sub);
+}
+
+#hero-section::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(90deg,
+            rgba(0, 0, 0, 0.55) 0%,
+            rgba(0, 0, 0, 0.55) 40%,
+            rgba(255, 255, 255, 0.05) 100%);
+    z-index: 0;
+}
+
+/* TEXT CONTAINER */
+#hero-section .hero-text {
+    position: relative;
+    z-index: 1;
+
+    max-width: 650px;
+
+    display: flex;
+    flex-direction: column;
+
+    line-height: 0.05;
+}
+
+/* TYPOGRAPHY */
+#hero-section .hero-text .welcome {
+    font-size: clamp(1.2rem, 2vw, 1.8rem);
+    font-weight: var(--font-semibold);
+}
+
+#hero-section .hero-text .name {
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    font-weight: var(--font-bold);
+    color: var(--color-text-heading);
+}
+
+#hero-section .hero-text .sub-name {
+    font-size: clamp(1.6rem, 3vw, 2.4rem);
+    font-weight: 600;
+    color: var(--color-accent);
+}
+
+#hero-section .hero-text .sub-caption {
+    font-size: clamp(0.95rem, 1.5vw, 1.1rem);
+    margin-top: 0.75rem;
+    letter-spacing: 0.5px;
+    max-width: 500px;
+}
+
+/* 📱 MOBILE */
+@media (max-width: 768px) {
+    #hero-section {
+        padding: 0 1.5rem;
+        background-attachment: scroll;
+    }
+
+    #hero-section .hero-text {
+        width: 100%;
+        align-items: center;
+        text-align: center;
+    }
+
+    #hero-section::before {
+        background: rgba(0, 0, 0, 0.55),
+    }
+}
