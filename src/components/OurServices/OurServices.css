@@ -22,3 +22,19 @@
     margin-bottom: 15px;
     border-radius: var(--radius-lg);
 }
+
+.section-title-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#view-all-services{
+    text-decoration:underline !important;
+    font-weight: 300;
+    font-size: 0.9em;
+    color: var(--color-text-sub);
+}
+#view-all-services:hover{
+    color: var(--color-text);
+}

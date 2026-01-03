@@ -11,8 +11,12 @@
   --color-secondary: #E0B860;
   --color-accent-sub: #9F7F36;
   --gradient-gold: linear-gradient(90deg,
+      var(--color-accent-sub) 0%,
+      var(--color-accent) 30%,
+      var(--color-secondary) 100%);
+
+  --button-gold: linear-gradient(0deg,
       #9F7F36 0%,
-      #C9A24D 30%,
       #E0B860 100%);
 
   --color-text-heading: #F5F5F5;
@@ -132,7 +136,7 @@
   /* =========================
    Fixed Container Heights
 ========================== */
-  --navbar-height: 50px;
+  --navbar-height: 60px;
 
   color-scheme: light dark;
   color: var(--color-text);
@@ -162,7 +166,7 @@ section {
 p {
   font-family: 'Opens Sans', sans-serif;
   font-size: 16px;
-  color:var(--color-text-sub)
+  color: var(--color-text-sub)
 }
 
 h1,
@@ -176,7 +180,9 @@ h6 {
 
 a {
   font-weight: 500;
-  text-decoration: inherit;
+  cursor: pointer;  
+  text-decoration: none;
+  color: var(--color-text-heading);
 }
 
 a:hover {
@@ -184,22 +190,24 @@ a:hover {
 }
 
 button {
-  border-radius: 8px;
-  border: 1px solid transparent;
+  max-width: 200px;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--color-text-heading);
+  color: var(--color-text-heading);
   padding: 0.6em 1.2em;
   font-size: 1em;
   font-weight: 500;
   font-family: inherit;
-  background-color: #1a1a1a;
+  background-color: var(--main-backgound-color);
   cursor: pointer;
-  transition: border-color 0.25s;
 }
 
 button:hover {
-  border-color: #646cff;
+  border-color: var(--color-accent);
+  color: var(--color-accent);
 }
 
 button:focus,
 button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+  opacity: 0.8;
 }

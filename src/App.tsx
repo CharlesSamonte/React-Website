@@ -1,5 +1,5 @@
 import './App.css'
-import { Navbar, Hero, About,CustomerReview, OurServices } from './components'
+import { Navbar, Hero, About, CustomerReview, OurServices } from './components'
 
 function App() {
   return (

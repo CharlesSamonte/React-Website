@@ -5,6 +5,30 @@
     line-height: 1.1;
 }
 
+.gold-btn {
+    background: var(--button-gold);
+    color: var(--main-backgound-color);
+    font-weight: 700;
+    border: 1px solid var(--color-secondary);
+    
+}
+
+.gold-btn:hover {
+    border-color: var(--color-text);
+    color: var(--section-backgound-color);
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateX(24px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
 
 @keyframes fadeUp {
     from {
@@ -16,4 +40,26 @@
         opacity: 1;
         transform: translateY(0);
     }
+}
+
+@keyframes navSlideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeLift {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }

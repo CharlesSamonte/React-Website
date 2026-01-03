@@ -3,8 +3,9 @@ import "./OurServices.css"
 const OurServices = () => {
     return (
         <section id="our-services-section">
-            <div>
+            <div className="section-title-container">
                 <h2 className="section-title">Our Services</h2>
+                <a href="" id="view-all-services">View All Services</a>
             </div>
             <div className="services-container">
                 <div className="service-card">

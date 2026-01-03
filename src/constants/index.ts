@@ -1,3 +1,8 @@
+const aboutUsText = {
+    header: "Built for the road. Trusted in Saskatoon.",
+    text: `At AutoCradle, we pride ourselves on delivering top-notch automotive services with a personal touch. Our team of experienced mechanics is dedicated to ensuring your vehicle runs smoothly and safely. From routine maintenance to complex repairs, we use the latest technology and techniques to get the job done right the first time. Customer satisfaction is our priority, and we strive to build lasting relationships with each of our clients. Trust AutoCradle for all your automotive needs – where quality meets reliability.`
+};
+
 const testimonials = [
     {
         name: "Byron O.",
@@ -21,4 +26,4 @@ const testimonials = [
     },
 ];
 
-export { testimonials };
+export { testimonials, aboutUsText };
