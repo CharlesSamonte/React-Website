@@ -3,6 +3,7 @@ import Hero from './Hero/Hero';
 import About from './About/About';
 import CustomerReview from './CustomerReview/CustomerReview';
 import OurServices from './OurServices/OurServices';
+import Contact from './Contact/Contact';
 // import Footer from './Footer';
 // import Sidebar from './Sidebar';
 // import Button from './Button';
@@ -13,7 +14,8 @@ export {
     Hero,
     About,
     CustomerReview,
-    OurServices
+    OurServices,
+    Contact,
     // Footer,
     // Sidebar,
     // Button,

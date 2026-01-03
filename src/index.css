@@ -160,12 +160,12 @@ body {
 }
 
 section {
-  padding: 2% 10%;
+  padding: 3rem 10%;
 }
 
 p {
   font-family: 'Opens Sans', sans-serif;
-  font-size: 16px;
+  font-size: 1rem;
   color: var(--color-text-sub)
 }
 
@@ -180,7 +180,7 @@ h6 {
 
 a {
   font-weight: 500;
-  cursor: pointer;  
+  cursor: pointer;
   text-decoration: none;
   color: var(--color-text-heading);
 }
@@ -210,4 +210,10 @@ button:hover {
 button:focus,
 button:focus-visible {
   opacity: 0.8;
+}
+
+@media (max-width: 768px) {
+  section {
+    padding: 4rem 1.5rem;
+  }
 }
