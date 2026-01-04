@@ -8,7 +8,7 @@ const Contact = () => {
     return (
         <section id="contact-section">
             <div className="section-title">
-                <h1 className="gold-text">GET IN TOUCH</h1>
+                <h1 className="gold-text">Get In Touch</h1>
                 <p>Have a question, need a quote, or planning your next build?<br />
                     Get in touch with AutoCradle and let’s get your vehicle taken care of.</p>
             </div>

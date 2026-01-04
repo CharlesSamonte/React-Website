@@ -1,8 +1,10 @@
 import "./CustomerReview.css";
 import { useState, useEffect } from "react";
 import { testimonials } from "../../constants";
+import useInViewAnimation from "../../hooks/useInViewAnimation";
 
 const CustomerReview = () => {
+    const { ref, isVisible } = useInViewAnimation();
     const [index, setIndex] = useState(0);
     const { name, text, image, rating } = testimonials[index];
 
@@ -15,10 +17,10 @@ const CustomerReview = () => {
     }, []);
 
     return (
-        <section className="testimonial-section">
-            <hr></hr>
-            <h2 className="testimonial-title gold-text">WHAT OUR CUSTOMERS SAY</h2>
-            <div className="testimonial-content">
+        <section ref={ref} className={`testimonial-section `}>
+            <hr className={`animate fade-up ${isVisible ? "visible" : ""}`}></hr>
+            <h2 className={`testimonial-title gold-text animate fade-up ${isVisible ? "visible" : ""}`}>WHAT OUR CUSTOMERS SAY</h2>
+            <div className={`testimonial-content animate fade-up ${isVisible ? "visible" : ""}`}>
                 <div className="testimonial-text">
                     <span className="quote-mark">“</span>
                     <p className="testimonial-quote">{text}</p>
@@ -31,7 +33,7 @@ const CustomerReview = () => {
                     <img src={image} alt="Customer vehicle" />
                 </div>
             </div>
-            <div className="testimonial-dots">
+            <div className={`testimonial-dots animate fade-up ${isVisible ? "visible" : ""}`}>
                 <hr></hr>
                 {
                     testimonials.map((_, idx) => (
