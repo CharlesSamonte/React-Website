@@ -3,6 +3,16 @@ const aboutUsText = {
     text: `At AutoCradle, we pride ourselves on delivering top-notch automotive services with a personal touch. Our team of experienced mechanics is dedicated to ensuring your vehicle runs smoothly and safely. From routine maintenance to complex repairs, we use the latest technology and techniques to get the job done right the first time. Customer satisfaction is our priority, and we strive to build lasting relationships with each of our clients. Trust AutoCradle for all your automotive needs – where quality meets reliability.`
 };
 
+const contactInfo = {
+    phone: "+1 (306) 952-1981",
+    email: "autocradle4x4@gmail.com",
+    address: "119 Jonathon Ave unit 602, Saskatoon, SK S7M 5Z6, Canada",
+    shopHours: "Mon - Sat: 9AM - 5PM",
+    socials: {
+        fbLink: "https://www.facebook.com/profile.php?id=61571610351983",
+    }
+}
+
 const testimonials = [
     {
         name: "Byron O.",
@@ -26,4 +36,4 @@ const testimonials = [
     },
 ];
 
-export { testimonials, aboutUsText };
+export { testimonials, aboutUsText, contactInfo };
