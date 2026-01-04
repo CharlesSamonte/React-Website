@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import "./Navbar.css";
 import PhoneIcon from "/src/assets/icons/phone.svg";
-
+import { contactInfo } from "../../constants/";
 
 const Navbar = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -26,11 +26,13 @@ const Navbar = () => {
                 <a>CONTACT</a>
             </div>
             <div className="call-to-action-container">
-                <p id="nav-phone">
-                    <img src={PhoneIcon} alt="Phone Icon" className="icon" />
-                    (306) 952-1981
-                </p>
-                <button className="nav-btn gold-btn">OUR SERVICES</button>
+                <a href={`tel:${contactInfo.phone}`} aria-label="Call AutoCradle at 306 952 1981">
+                    <p id="nav-phone">
+                        <img src={PhoneIcon} alt="Phone Icon" className="icon" />
+                        {contactInfo.phone}
+                    </p>
+                </a>
+                <button className="nav-btn gold-btn">GET A QUOTE</button>
             </div>
             <div className={`hamburger-menu ${isMenuOpen ? 'open' : ''}`}
                 onClick={() => setIsMenuOpen(!isMenuOpen)}
@@ -45,7 +47,13 @@ const Navbar = () => {
                 <a href="#about-section">ABOUT US</a>
                 <a>SERVICES</a>
                 <a>CONTACT</a>
-                <button className="nav-btn gold-btn">OUR SERVICES</button>
+                <a href={`tel:${contactInfo.phone}`} aria-label="Call AutoCradle at 306 952 1981">
+                    <p id="nav-phone">
+                        <img src={PhoneIcon} alt="Phone Icon" className="icon" />
+                        {contactInfo.phone}
+                    </p>
+                </a>
+                <button className="nav-btn gold-btn">GET A QUOTE</button>
             </div>
         </nav>
     );

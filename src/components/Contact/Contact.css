@@ -10,7 +10,6 @@
 
 .cards-container .card {
     flex: 1;
-    min-width: 300px;
     background-color: var(--card-backgound-color);
     border-radius: var(--radius-md);
     padding: 2rem 2rem;
@@ -56,4 +55,10 @@
 .map-container iframe {
     width: 100%;
     height: 100%;
+}
+
+@media (max-width: 768px) {
+    .map-container {
+        width: 100%;
+    }
 }
