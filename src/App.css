@@ -18,6 +18,9 @@
     color: var(--section-backgound-color);
 }
 
+.text-sub{
+  color: var(--color-text-sub) !important;
+}
 @keyframes fadeIn {
     from {
         opacity: 0;
