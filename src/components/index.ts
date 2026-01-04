@@ -4,7 +4,7 @@ import About from './About/About';
 import CustomerReview from './CustomerReview/CustomerReview';
 import OurServices from './OurServices/OurServices';
 import Contact from './Contact/Contact';
-// import Footer from './Footer';
+import Footer from './Footer/Footer';
 // import Sidebar from './Sidebar';
 // import Button from './Button';
 // import Card from './Card';
@@ -16,7 +16,7 @@ export {
     CustomerReview,
     OurServices,
     Contact,
-    // Footer,
+    Footer,
     // Sidebar,
     // Button,
     // Card,

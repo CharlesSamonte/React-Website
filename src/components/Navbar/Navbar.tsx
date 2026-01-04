@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import "./Navbar.css";
 import PhoneIcon from "/src/assets/icons/phone.svg";
-import { contactInfo } from "../../constants/";
+import { navLinks, contactInfo } from "../../constants/";
 
 const Navbar = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -20,10 +20,11 @@ const Navbar = () => {
         <nav id="navbar" className={`${scrolled ? "shrink" : ""}`}>
             <img className="logo" src="/src/assets/logo.png" alt="Logo" />
             <div className="nav-links">
-                <a href="#">HOME</a>
-                <a>ABOUT US</a>
-                <a>SERVICES</a>
-                <a>CONTACT</a>
+                {
+                    navLinks.map((nav, index) => {
+                        return <a key={index} href={nav.href}>{nav.label}</a>
+                    })
+                }
             </div>
             <div className="call-to-action-container">
                 <a href={`tel:${contactInfo.phone}`} aria-label="Call AutoCradle at 306 952 1981">
@@ -43,10 +44,11 @@ const Navbar = () => {
             </div>
             <div className={`overlay-menu ${isMenuOpen ? 'open' : ''}`}
                 onClick={() => setIsMenuOpen(!isMenuOpen)}>
-                <a href="#">HOME</a>
-                <a href="#about-section">ABOUT US</a>
-                <a>SERVICES</a>
-                <a>CONTACT</a>
+                {
+                    navLinks.map((nav, index) => {
+                        return <a key={index} href={nav.href}>{nav.label}</a>
+                    })
+                }
                 <a href={`tel:${contactInfo.phone}`} aria-label="Call AutoCradle at 306 952 1981">
                     <p id="nav-phone">
                         <img src={PhoneIcon} alt="Phone Icon" className="icon" />
