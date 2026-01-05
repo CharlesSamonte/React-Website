@@ -1,11 +1,9 @@
 import {
-    Navbar,
     Hero,
     About,
     CustomerReview,
     OurServices,
     Contact,
-    Footer,
     Shop
 } from '../components'
 

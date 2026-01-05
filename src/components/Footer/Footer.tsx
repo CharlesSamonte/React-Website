@@ -3,6 +3,9 @@ import "./Footer.css";
 import { navLinks, contactInfo } from "../../constants";
 import fbIcon from "/src/assets/icons/facebook-logo.svg";
 import igIcon from "/src/assets/icons/instagram-logo.svg";
+import Logo from "/src/assets/logo.png";
+
+
 
 const Footer = () => {
     return (
@@ -10,7 +13,7 @@ const Footer = () => {
             <div className="footer-container">
                 <div className="footer-brand">
                     <div className="footer-img-container">
-                        <img src="/src/assets/logo.png" alt="AutoCradle Logo" />
+                        <img loading="lazy" src={Logo} alt="AutoCradle Logo" />
                     </div>
                     <p>
                         Built for the road. Trusted in Saskatoon.
@@ -41,10 +44,10 @@ const Footer = () => {
                     <h4>Follow Us</h4>
                     <div className="socials-list">
                         <a className="social-icon-container" href={contactInfo.socials.fbLink}>
-                            <img src={fbIcon}></img>
+                            <img loading="lazy" src={fbIcon}></img>
                         </a>
                         <a href="social-icon-container">
-                            <img src={igIcon}></img>
+                            <img loading="lazy" src={igIcon}></img>
                         </a>
                     </div>
                 </div>

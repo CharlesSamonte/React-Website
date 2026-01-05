@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { NavLink } from "react-router-dom";
 import "./Navbar.css";
 import PhoneIcon from "/src/assets/icons/phone.svg";
+import Logo from "/src/assets/logo.png";
 import { navLinks, contactInfo } from "../../constants/";
 
 function NavLinks() {
@@ -55,14 +56,14 @@ const Navbar = () => {
     }, []);
     return (
         <nav id="navbar" className={`${scrolled ? "shrink" : ""}`}>
-            <img className="logo" src="/src/assets/logo.png" alt="Logo" />
+            <img  loading="lazy" className="logo" src={Logo} alt="AutoCradle Auto Shop Logo" />
             <div className="nav-links">
                 <NavLinks />
             </div>
             <div className="call-to-action-container">
                 <a href={`tel:${contactInfo.phone}`} aria-label="Call AutoCradle at 306 952 1981">
                     <p id="nav-phone">
-                        <img src={PhoneIcon} alt="Phone Icon" className="icon" />
+                        <img  loading="lazy" src={PhoneIcon} alt="Phone Icon" className="icon" />
                         {contactInfo.phone}
                     </p>
                 </a>
@@ -82,7 +83,7 @@ const Navbar = () => {
                 }
                 <a href={`tel:${contactInfo.phone}`} aria-label="Call AutoCradle at 306 952 1981">
                     <p id="nav-phone">
-                        <img src={PhoneIcon} alt="Phone Icon" className="icon" />
+                        <img  loading="lazy" src={PhoneIcon} alt="Phone Icon" className="icon" />
                         {contactInfo.phone}
                     </p>
                 </a>

@@ -1,6 +1,7 @@
 import "./About.css";
 import { aboutUsText } from "../../constants";
 import useInViewAnimation from "../../hooks/useInViewAnimation";
+import aboutImg from "/src/assets/about-image.jpg";
 
 const About = () => {
     const { ref, isVisible } = useInViewAnimation();
@@ -21,7 +22,7 @@ const About = () => {
                 <button className={`gold-btn animate fade-up ${isVisible ? "visible" : ""}`}>OUR SERVICES</button>
             </div>
             <div className={`about-image-container delay-animate delay-1 slide-left ${isVisible ? "visible" : ""}`}>
-                <img src="src/assets/about-image.jpg" alt="About AutoCradle" />
+                <img loading="lazy" src={aboutImg} alt="About AutoCradle" />
             </div>
         </section >
     )

@@ -53,10 +53,10 @@ const Contact = () => {
                             <p className="text-sub">Follow us on social media:</p>
                             <div className="socials-list">
                                 <a href={contactInfo.socials.fbLink} >
-                                    <img className="img-icon" src={fbIcon}></img>
+                                    <img  loading="lazy" className="img-icon" src={fbIcon}></img>
                                 </a>
                                 <a href="">
-                                    <img className="img-icon" src={igIcon}></img>
+                                    <img  loading="lazy" className="img-icon" src={igIcon}></img>
                                 </a>
                             </div>
                             <hr></hr>

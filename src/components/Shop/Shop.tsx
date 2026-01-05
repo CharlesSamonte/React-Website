@@ -17,7 +17,7 @@ const Shop = () => {
                     <div className={`card-wrapper delay-animate delay-1 slide-left ${isVisible ? "visible" : ""}`}>
 
                         <div className={`shop-card card`}>
-                            <img src="/src/assets/shop/lift-kit.jpg" alt="4x4 Lift Kit" />
+                            <img loading="lazy" src="/src/assets/shop/lift-kit.jpg" alt="4x4 Lift Kit" />
                             <div className="shop-info">
                                 <h3>4x4 Lift Kits</h3>
                                 <p>Suspension upgrades built for performance and durability.</p>
@@ -29,7 +29,7 @@ const Shop = () => {
                     <div className={`card-wrapper delay-animate delay-2 slide-left ${isVisible ? "visible" : ""}`}>
 
                         <div className={`shop-card card`}>
-                            <img src="/src/assets/shop/offroad-bumper.jpg" alt="Off-Road Bumper" />
+                            <img loading="lazy" src="/src/assets/shop/offroad-bumper.jpg" alt="Off-Road Bumper" />
                             <div className="shop-info">
                                 <h3>Off-Road Bumpers</h3>
                                 <p>Heavy-duty protection engineered for extreme terrain.</p>
@@ -41,7 +41,7 @@ const Shop = () => {
                     <div className={`card-wrapper delay-animate delay-3 slide-left ${isVisible ? "visible" : ""}`}>
 
                         <div className={`shop-card card`}>
-                            <img src="/src/assets/shop/wheels.jpg" alt="Wheels and Tires" />
+                            <img loading="lazy" src="/src/assets/shop/wheels.jpg" alt="Wheels and Tires" />
                             <div className="shop-info">
                                 <h3>Wheels & Tires</h3>
                                 <p>Premium wheels and tires tailored for your build.</p>

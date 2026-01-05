@@ -1,6 +1,5 @@
 import { useState } from "react";
 import "./Shop.css";
-import { Footer } from "../components";
 import { shopItems } from "../constants/shopItems";
 
 const categories = [

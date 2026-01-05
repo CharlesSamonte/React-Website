@@ -30,7 +30,7 @@ const CustomerReview = () => {
                     </div>
                 </div>
                 <div className="testimonial-image">
-                    <img src={image} alt="Customer vehicle" />
+                    <img  loading="lazy" src={image} alt="Customer vehicle" />
                 </div>
             </div>
             <div className={`testimonial-dots animate fade-up ${isVisible ? "visible" : ""}`}>
