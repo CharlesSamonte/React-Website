@@ -41,20 +41,33 @@
   color: var(--color-text-sub) !important;
 }
 
-.animate {
+.animate,
+.delay-animate {
   opacity: 0;
 }
 
-.animate.visible {
-  opacity: 1;
-}
-
 .fade-up.visible {
-  animation: fadeUp 0.9s ease-in;
+  animation: fadeUp 0.9s ease-in forwards;
 }
 
 .slide-left.visible {
-  animation: slideLeft 0.9s ease-in;
+  animation: slideLeft 0.9s ease forwards;
+}
+
+.delay-animate.visible{
+  animation-delay: 0.5s;
+}
+
+.delay-2.visible {
+  animation-delay: 0.65s;
+}
+
+.delay-3.visible {
+  animation-delay: 0.80s;
+}
+
+.delay-4.visible {
+  animation-delay: 0.95s;
 }
 
 @keyframes fadeIn {
@@ -108,7 +121,7 @@
 @keyframes slideLeft {
   from {
     opacity: 0;
-    transform: translateX(32px);
+    transform: translateX(100px);
   }
 
   to {
