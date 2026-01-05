@@ -55,19 +55,7 @@
 }
 
 .delay-animate.visible{
-  animation-delay: 0.5s;
-}
-
-.delay-2.visible {
-  animation-delay: 0.65s;
-}
-
-.delay-3.visible {
-  animation-delay: 0.80s;
-}
-
-.delay-4.visible {
-  animation-delay: 0.95s;
+  animation-delay: var(--delay, 0s);
 }
 
 @keyframes fadeIn {

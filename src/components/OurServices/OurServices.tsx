@@ -13,7 +13,9 @@ const OurServices = () => {
                 <a href="" id="view-all-services" className="a-link">View All Services</a>
             </div>
             <div className="services-container">
-                <div className={`card-wrapper slide-left  delay-animate delay-1 ${isVisible ? "visible" : ""}`}>
+                <div className={`card-wrapper slide-left delay-animate ${isVisible ? "visible" : ""}`}
+                    style={{ "--delay": `${0.35}s` } as React.CSSProperties}
+                >
                     <div className={`service-card card`}>
                         <div className="img-container">
                             <img loading="lazy" src="/assets/services/auto-body-repair.png" alt="Auto Body Repair">
@@ -23,7 +25,9 @@ const OurServices = () => {
                         <p>Expert collision repair and paint services to restore your vehicle to its original condition.</p>
                     </div>
                 </div>
-                <div className={`card-wrapper slide-left  delay-animate delay-2 ${isVisible ? "visible" : ""}`}>
+                <div className={`card-wrapper slide-left  delay-animate ${isVisible ? "visible" : ""}`}
+                    style={{ "--delay": `${0.50}s` } as React.CSSProperties}
+                >
                     <div className={`service-card card`}>
                         <div className="img-container">
                             <img loading="lazy" src="/assets/services/engine-repair.png" alt="Engine Repair"></img>
@@ -32,7 +36,9 @@ const OurServices = () => {
                         <p>Professional engine diagnostics and repair services to keep your vehicle running smoothly.</p>
                     </div>
                 </div>
-                <div className={`card-wrapper slide-left  delay-animate delay-3 ${isVisible ? "visible" : ""}`}>
+                <div className={`card-wrapper slide-left  delay-animate ${isVisible ? "visible" : ""}`}
+                    style={{ "--delay": `${0.60}s` } as React.CSSProperties}
+                >
                     <div className={`service-card card`}>
                         <div className="img-container">
                             <img loading="lazy" src="/assets/services/4x4-setup.png" alt="4x4setup"></img>
@@ -42,7 +48,7 @@ const OurServices = () => {
                     </div>
                 </div>
             </div>
-        </section>
+        </section >
     );
 }
 

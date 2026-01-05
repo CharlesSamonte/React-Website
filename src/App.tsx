@@ -3,6 +3,7 @@ import { Routes, Route } from "react-router-dom";
 import {
   Navbar,
   Footer,
+  ScrollToTop
 } from './components'
 
 import HomePage from './pages/HomePage';
@@ -14,12 +15,14 @@ import ContactPage from './pages/ContactPage';
 function App() {
   return (
     <>
+      <ScrollToTop />
       <Navbar />
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/about" element={<AboutPage />} />
         <Route path="/services" element={<ServicesPage />} />
         <Route path="/shop" element={<ShopPage />} />
+        <Route path="/shop/:productID" element={<ShopPage />} />
         <Route path="/contactus" element={<ContactPage />} />
       </Routes>
       <Footer />

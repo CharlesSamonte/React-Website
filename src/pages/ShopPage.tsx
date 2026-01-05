@@ -1,6 +1,7 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import "./Shop.css";
 import { shopItems } from "../constants/shopItems";
+import { useParams } from "react-router-dom";
 
 const categories = [
     "All",
@@ -12,7 +13,7 @@ const categories = [
 ];
 
 type Product = {
-    id: number;
+    id: string;
     name: string;
     category: string;
     description: string;
@@ -54,6 +55,20 @@ const ProductInfo = (selectedProduct: Product) => {
 const ShopPage = () => {
     const [activeCategory, setActiveCategory] = useState("All");
     const [selectedProduct, setSelectedProduct] = useState<Product | null>(null);
+
+    const { productID } = useParams();
+    useEffect(() => {
+        if (!productID) return;
+
+        const product = shopItems.find(
+            item => item.id === productID
+        );
+
+        if (product) {
+            setSelectedProduct(product);
+        }
+    }, [productID]);
+
 
     const filteredItems =
         activeCategory === "All"

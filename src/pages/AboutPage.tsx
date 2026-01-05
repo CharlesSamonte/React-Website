@@ -1,19 +1,22 @@
 import "./AboutPage.css";
 import { useNavigate } from "react-router-dom";
+import useInViewAnimation from "../hooks/useInViewAnimation";
+
 const AboutPage = () => {
   const navigate = useNavigate();
+  const { ref, isVisible } = useInViewAnimation();
 
   return (
-    <section className="about-page">
+    <section ref={ref} className="about-page">
       {/* HERO */}
-      <div className="about-hero">
-        <h1>About AutoCradle</h1>
-        <p className="subtitle">Built for the road. Trusted in Saskatoon.</p>
+      <div className={`about-hero animate fade-up ${isVisible && "visible"}`}>
+        <h1 className={`animate fade-up ${isVisible && "visible"}`}>About AutoCradle</h1>
+        <p className={`subtitle delay-animate delay-1 fade-up ${isVisible && "visible"}`}>Built for the road. Trusted in Saskatoon.</p>
       </div>
 
       {/* CONTENT */}
       <div className="about-content">
-        <div className="about-block">
+        <div className={`about-block delay-animate delay-3 fade-up ${isVisible && "visible"}`}>
           <h2>Who We Are</h2>
           <p>
             AutoCradle Auto Shop was founded with a simple mission: to deliver
@@ -25,7 +28,7 @@ const AboutPage = () => {
           </p>
         </div>
 
-        <div className="about-block">
+        <div className={`about-block delay-animate delay-4 fade-up ${isVisible && "visible"}`}>
           <h2>Experience You Can Count On</h2>
           <p>
             Our team brings hands-on experience across automotive repair,
@@ -36,7 +39,7 @@ const AboutPage = () => {
           </p>
         </div>
 
-        <div className="about-block">
+        <div className={`about-block animate fade-up ${isVisible && "visible"}`}>
           <h2>More Than a Shop</h2>
           <p>
             AutoCradle is proud to be a locally owned and operated shop serving
@@ -47,18 +50,18 @@ const AboutPage = () => {
           </p>
         </div>
 
-        <div className="about-cta">
-          <h3>Let’s Build Something Reliable</h3>
-          <p>
-            Whether you need professional repairs or a custom build, AutoCradle
-            Auto Shop is ready to help.
-          </p>
-          <button className="gold-btn"
-            onClick={() => navigate("/contactus")}>
-            Contact Us
-          </button>
+          <div className={`about-cta animate fade-up ${isVisible && "visible"}`}>
+            <h3>Let’s Build Something Reliable</h3>
+            <p>
+              Whether you need professional repairs or a custom build, AutoCradle
+              Auto Shop is ready to help.
+            </p>
+            <button className="gold-btn"
+              onClick={() => navigate("/contactus")}>
+              Contact Us
+            </button>
+          </div>
         </div>
-      </div>
     </section>
   );
 };

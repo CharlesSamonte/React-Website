@@ -44,22 +44,6 @@ const testimonials = [
     },
 ];
 
-const shopItems = [
-    {
-        img: "/assets/shop/lift-kit.jpg",
-        title: "4x4 Lift Kits",
-        desc: "Suspension upgrades built for performance and durability.",
-    },
-    {
-        img: "/assets/shop/offroad-bumper.jpg",
-        title: "Off-Road Bumpers",
-        desc: "Heavy-duty protection engineered for extreme terrain.",
-    },
-    {
-        img: "/assets/shop/wheels.jpg",
-        title: "Wheels & Tires",
-        desc: "Premium wheels and tires tailored for your build.",
-    },
-];
 
-export { testimonials, aboutUsText, contactInfo, navLinks, shopItems };
+
+export { testimonials, aboutUsText, contactInfo, navLinks };

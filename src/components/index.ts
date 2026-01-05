@@ -6,7 +6,7 @@ import OurServices from './OurServices/OurServices';
 import Contact from './Contact/Contact';
 import Footer from './Footer/Footer';
 import Shop from './Shop/Shop';
-
+import ScrollToTop from './ScrollToTop';
 export {
     Navbar,
     Hero,
@@ -16,4 +16,5 @@ export {
     Contact,
     Footer,
     Shop,
+    ScrollToTop,
 };

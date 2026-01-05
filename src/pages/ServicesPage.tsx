@@ -54,22 +54,30 @@ const ServicesPage = () => {
             </header>
 
             <div className="services-grid">
-                {services.map((service, index) => (
-                    <div key={index} className={`service-category animate slide-left ${isVisible ? "visible" : ""}`}>
-                        <h3>{service.category}</h3>
-                        <ul>
-                            <ul>
-                                {service.items.map((item, idx) => (
-                                    <li key={idx} className="service-item">
-                                        <span className="service-name">{item.name}</span>
-                                        <span className="service-price">{item.price}</span>
-                                    </li>
-                                ))}
-                            </ul>
+                {
 
-                        </ul>
-                    </div>
-                ))}
+                    services.map((service, index) => {
+                        const delay = 0.35 + Math.log(index + 1) * 0.20;
+                        return (
+                            <div key={index}
+                                className={`service-category delay-animate slide-left ${isVisible ? "visible" : ""}`}
+                                style={{ "--delay": `${delay}s` } as React.CSSProperties}
+                            >
+                                <h3>{service.category}</h3>
+                                <ul>
+                                    <ul>
+                                        {service.items.map((item, idx) => (
+                                            <li key={idx} className="service-item">
+                                                <span className="service-name">{item.name}</span>
+                                                <span className="service-price">{item.price}</span>
+                                            </li>
+                                        ))}
+                                    </ul>
+
+                                </ul>
+                            </div>)
+                    }
+                    )}
             </div>
         </section>
     );

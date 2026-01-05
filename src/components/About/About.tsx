@@ -21,7 +21,7 @@ const About = () => {
                 </p>
                 <button className={`gold-btn animate fade-up ${isVisible ? "visible" : ""}`}>OUR SERVICES</button>
             </div>
-            <div className={`about-image-container delay-animate delay-1 slide-left ${isVisible ? "visible" : ""}`}>
+            <div className={`about-image-container animate slide-left ${isVisible ? "visible" : ""}`}>
                 <img loading="lazy" src={aboutImg} alt="About AutoCradle" />
             </div>
         </section >
