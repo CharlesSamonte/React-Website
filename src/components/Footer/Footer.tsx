@@ -22,7 +22,7 @@ const Footer = () => {
                     <h4>Quick Links</h4>
                     {
                         navLinks.map((nav, index) => {
-                            return <a key={index} href={nav.href}>{nav.label}</a>
+                            return <a key={index} href={nav.to}>{nav.label}</a>
                         })
                     }
                 </div>

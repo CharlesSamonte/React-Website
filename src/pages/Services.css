@@ -1,0 +1,146 @@
+/* ===============================
+   SERVICES SECTION
+================================ */
+
+.services-section {
+    color: var(--color-text);
+}
+
+/* ===============================
+   HEADER
+================================ */
+
+.services-header {
+    max-width: 720px;
+    margin-bottom: 4rem;
+}
+
+.services-header h2 {
+    font-size: 2.4rem;
+    color: var(--color-text-heading);
+    margin-bottom: 0.6rem;
+}
+
+.services-header p {
+    color: var(--color-text-sub);
+}
+
+/* ===============================
+   GRID
+================================ */
+
+.services-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+}
+
+/* ===============================
+   CATEGORY CARD
+================================ */
+
+.service-category {
+    background: var(--card-backgound-color);
+    border-radius: var(--radius-lg);
+    padding: 2rem;
+    border-top: 3px solid transparent;
+    transition: transform 0.4s ease, box-shadow 0.4s ease, border-color 0.4s ease;
+}
+
+.service-category:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.45);
+    border-top-color: var(--color-accent);
+}
+
+/* ===============================
+   CATEGORY CONTENT
+================================ */
+
+.service-category h3 {
+    color: var(--color-text-heading);
+    font-size: 1.2rem;
+    margin-bottom: 1.2rem;
+}
+
+.service-category ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.service-category li {
+    position: relative;
+    padding-left: 1.4rem;
+    margin-bottom: 0.6rem;
+    color: var(--color-text-sub);
+    font-size: 0.95rem;
+}
+
+/* Gold bullet */
+.service-category li::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0.55rem;
+    width: 6px;
+    height: 6px;
+    background: var(--color-accent);
+    border-radius: 50%;
+}
+
+/* ===============================
+   SERVICE ITEMS WITH PRICES
+================================ */
+
+.service-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    padding-left: 1.4rem;
+    margin-bottom: 0.7rem;
+    position: relative;
+}
+
+.service-item::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0.6rem;
+    width: 6px;
+    height: 6px;
+    background: var(--color-accent);
+    border-radius: 50%;
+}
+
+.service-name {
+    color: var(--color-text-sub);
+    font-size: 0.95rem;
+}
+
+.service-price {
+    color: var(--color-accent);
+    font-size: 0.85rem;
+    white-space: nowrap;
+}
+
+/* Subtle hover highlight */
+.service-category:hover .service-price {
+    color: var(--color-secondary);
+}
+
+
+/* ===============================
+   RESPONSIVE
+================================ */
+
+@media screen and (max-width: 768px) {
+    .services-section {
+        padding: 4.5rem 6%;
+    }
+
+    .services-header h2 {
+        font-size: 2rem;
+    }
+}

@@ -2,16 +2,11 @@ import './App.css'
 import { Routes, Route } from "react-router-dom";
 import {
   Navbar,
-  Hero,
-  About,
-  CustomerReview,
-  OurServices,
-  Contact,
-  Footer,
-  Shop
 } from './components'
 
 import HomePage from './pages/HomePage';
+import ShopPage from './pages/ShopPage';
+import ServicesPage from './pages/ServicesPage';
 
 function App() {
   return (
@@ -19,6 +14,8 @@ function App() {
       <Navbar />
       <Routes>
         <Route path="/" element={<HomePage />} />
+        <Route path="/services" element={<ServicesPage />} />
+        <Route path="/shop" element={<ShopPage />} />
       </Routes>
     </>
     // <>

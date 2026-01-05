@@ -1,8 +1,8 @@
 const navLinks = [
     { label: "Home", to: "/", type: "route" },
-    { label: "About", to: "#about-section", type: "scroll" },
-    { label: "Services", to: "#our-services-section", type: "scroll" },
-    { label: "Shop", to: "#", type: "scroll" },
+    { label: "About", to: "/about", type: "route" },
+    { label: "Services", to: "/services", type: "route" },
+    { label: "Shop", to: "/shop", type: "route" },
     { label: "Contact", to: "#contact-section", type: "scroll" },
 ];
 
