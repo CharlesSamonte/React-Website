@@ -15,7 +15,8 @@
     background: rgba(0, 0, 0, 0.92);
     z-index: 0;
 }
-#contact-section>*{
+
+#contact-section>* {
     position: relative;
 }
 
@@ -50,18 +51,19 @@
     width: 20px;
 }
 
-.contact-container .contact-div #card-contacts-list .socials-list {
+.socials-list {
     display: flex;
     flex-direction: row;
     gap: 0.5rem;
 }
 
-.contact-container .contact-div #card-contacts-list .socials-list img {
-    height: 32px;
+
+.img-icon:hover {
+    opacity: 0.8;
 }
 
-.contact-container .contact-div #card-contacts-list .socials-list img:hover {
-    opacity: 0.8;
+.img-icon {
+    height: 32px;
 }
 
 .map-container {

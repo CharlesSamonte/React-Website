@@ -1,4 +1,5 @@
 import "./Services.css";
+import useInViewAnimation from "../hooks/useInViewAnimation";
 
 const services = [
     {
@@ -42,21 +43,19 @@ const services = [
     },
 ];
 
-
 const ServicesPage = () => {
+    const { ref, isVisible } = useInViewAnimation();
     return (
-        <section id="services-section" className="services-section">
+        <section ref={ref} id="services-section" className={`services-section animate fade-up ${isVisible ? "visible" : ""}`}>
             <header className="services-header">
                 <h2>Our Services</h2>
                 <p>
-                    Professional automotive services built for reliability, performance,
-                    and durability.
-                </p>
+                    AutoCradle Auto Shop is your trusted partner for all things automotive and off-road. From routine maintenance like oil changes and brake inspections to advanced diagnostics, custom upgrades, and fabrication work, our team combines real-world experience with a commitment to craftsmanship and customer satisfaction. We serve Saskatoon drivers with honest recommendations, quality parts, and dependable results — helping keep your vehicle safe, reliable, and adventure-ready for every road and trail.                 </p>
             </header>
 
             <div className="services-grid">
                 {services.map((service, index) => (
-                    <div key={index} className="service-category">
+                    <div key={index} className={`service-category animate slide-left ${isVisible ? "visible" : ""}`}>
                         <h3>{service.category}</h3>
                         <ul>
                             <ul>

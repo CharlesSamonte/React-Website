@@ -28,8 +28,12 @@ const Footer = () => {
                 </div>
                 <div className="footer-contact">
                     <h4>Contact</h4>
-                    <p>{contactInfo.phone}</p>
-                    <p>{contactInfo.email}</p>
+                    <a href={`tel:${contactInfo.phone}`}>
+                        <p>{contactInfo.phone}</p>
+                    </a>
+                    <a href={`mailto:${contactInfo.phone}`}>
+                        <p>{contactInfo.email}</p>
+                    </a>
                     <p>{contactInfo.address}</p>
 
                 </div>

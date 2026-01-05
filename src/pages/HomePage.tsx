@@ -18,7 +18,6 @@ export default function HomePage() {
             < OurServices />
             < Shop />
             < Contact />
-            < Footer />
         </>
     )
 }

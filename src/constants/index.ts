@@ -3,7 +3,7 @@ const navLinks = [
     { label: "About", to: "/about", type: "route" },
     { label: "Services", to: "/services", type: "route" },
     { label: "Shop", to: "/shop", type: "route" },
-    { label: "Contact", to: "#contact-section", type: "scroll" },
+    { label: "Contact", to: "/contactus", type: "route" },
 ];
 
 const aboutUsText = {
