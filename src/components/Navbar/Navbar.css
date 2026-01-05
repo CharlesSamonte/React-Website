@@ -7,7 +7,7 @@
     display: flex;
     align-items: center;
     gap: 4rem;
-    padding: 4px 2rem;
+    padding: 8px 2rem;
     animation: navSlideDown 0.5s ease forwards;
     height: var(--navbar-height);
       transition: all 0.3s ease;
@@ -61,10 +61,13 @@
     display: flex;
     align-items: center;
     transition: color 0.2s ease;
-
 }
 
 #navbar .nav-links a:hover {
+    color: var(--color-accent);
+}
+
+#navbar .nav-link.active {
     color: var(--color-accent);
 }
 

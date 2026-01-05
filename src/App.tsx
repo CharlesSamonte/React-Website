@@ -1,4 +1,5 @@
 import './App.css'
+import { Routes, Route } from "react-router-dom";
 import {
   Navbar,
   Hero,
@@ -10,18 +11,25 @@ import {
   Shop
 } from './components'
 
+import HomePage from './pages/HomePage';
+
 function App() {
   return (
     <>
       <Navbar />
-      <Hero />
-      <About />
-      <CustomerReview />
-      <OurServices />
-      <Shop />
-      <Contact />
-      <Footer />
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+      </Routes>
     </>
+    // <>
+    //   <Hero />
+    //   <About />
+    //   <CustomerReview />
+    //   <OurServices />
+    //   <Shop />
+    //   <Contact />
+    //   <Footer />
+    // </>
   )
 }
 

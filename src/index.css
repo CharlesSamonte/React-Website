@@ -139,6 +139,10 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+html{
+  scroll-behavior: smooth;
+}
+
 #root {
   margin: 0;
   font-family: 'Open Sans', sans-serif;

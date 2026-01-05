@@ -1,25 +1,10 @@
 const navLinks = [
-    {
-        label: "HOME",
-        href: "/"
-    },
-    {
-        label: "ABOUT US",
-        href: "#about-section"
-    },
-    {
-        label: "SERVICES",
-        href: "#our-services-section"
-    },
-    {
-        label: "SHOP",
-        href: "#"
-    },
-    {
-        label: "CONTACT",
-        href: "#contact-section"
-    },
-]
+    { label: "Home", to: "/", type: "route" },
+    { label: "About", to: "#about-section", type: "scroll" },
+    { label: "Services", to: "#our-services-section", type: "scroll" },
+    { label: "Shop", to: "#", type: "scroll" },
+    { label: "Contact", to: "#contact-section", type: "scroll" },
+];
 
 const aboutUsText = {
     header: "Built for the road. Trusted in Saskatoon.",
