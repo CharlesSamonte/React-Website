@@ -44,6 +44,22 @@ const testimonials = [
     },
 ];
 
+const servicesHighlight = [
+    {
+        title: "Automotive Services",
+        subTitle: "Expert collision repair and paint services to restore your vehicle to its original condition.",
+        imgPath: "/assets/services/auto-body-repair.png",
+    },
+    {
+        title: "Engine Repair",
+        subTitle: "Professional engine diagnostics and repair services to keep your vehicle running smoothly.",
+        imgPath: "/assets/services/engine-repair.png",
+    },
+    {
+        title: "4x4 Setup and Overloading Setup",
+        subTitle: "Tailored fabrication solutions to meet your unique vehicle needs and specifications.",
+        imgPath: "/assets/services/4x4-setup.png",
+    },
+]
 
-
-export { testimonials, aboutUsText, contactInfo, navLinks };
+export { testimonials, aboutUsText, contactInfo, navLinks, servicesHighlight };

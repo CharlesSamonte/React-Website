@@ -10,7 +10,7 @@
     padding: 8px 2rem;
     animation: navSlideDown 0.5s ease forwards;
     height: var(--navbar-height);
-      transition: all 0.3s ease;
+    transition: all 0.3s ease;
 }
 
 #navbar.shrink {
@@ -21,6 +21,9 @@
 #navbar.shrink {
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.45);
 }
+#navbar.shrink .logo{
+    transform: scale(0.8);
+}   
 
 #navbar .logo {
     font-family: 'Montserrat', sans-serif;
@@ -37,18 +40,23 @@
     opacity: 0;
     animation: fadeLift 0.5s ease forwards;
 }
+
 #navbar .nav-links a:nth-child(1) {
     animation-delay: 0.15s;
 }
+
 #navbar .nav-links a:nth-child(2) {
     animation-delay: 0.3s;
 }
+
 #navbar .nav-links a:nth-child(3) {
     animation-delay: 0.45s;
 }
+
 #navbar .nav-links a:nth-child(4) {
     animation-delay: 0.6s;
 }
+
 #navbar .nav-links a:nth-child(5) {
     animation-delay: 0.75s;
 }
@@ -95,6 +103,10 @@
     background-color: var(--color-accent);
     border-radius: var(--radius-full);
     padding: 4px;
+}
+
+#navbar.shrink .nav-btn {
+    padding: 2px 8px;
 }
 
 .nav-btn {

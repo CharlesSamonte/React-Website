@@ -186,7 +186,7 @@ a:hover {
 }
 
 button {
-  max-width: 200px;
+  width: 200px;
   border-radius: var(--radius-sm);
   border: 1px solid var(--color-text-heading);
   color: var(--color-text-heading);
@@ -215,5 +215,8 @@ button:focus-visible {
 
   p{
     font-size: var(--text-sm);
+  }
+  button{
+    width: 100%;
   }
 }

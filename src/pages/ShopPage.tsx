@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import "./Shop.css";
 import { shopItems } from "../constants/shopItems";
 import { useParams } from "react-router-dom";
+import useInViewAnimation from "../hooks/useInViewAnimation";
 
 const categories = [
     "All",
@@ -31,17 +32,7 @@ const ProductInfo = (selectedProduct: Product) => {
             {selectedProduct.price && (
                 <p className="price">{selectedProduct.price}</p>
             )}
-
-            <span
-                className={`status ${selectedProduct.available ? "in" : "out"
-                    }`}
-            >
-                {selectedProduct.available}
-            </span>
-
             <div className="shop-card-content">
-                <h3>{selectedProduct.name}</h3>
-                <span className="category">{selectedProduct.category}</span>
                 {selectedProduct.available ? (
                     <span className="status available">Available In-Store</span>
                 ) : (
@@ -55,6 +46,7 @@ const ProductInfo = (selectedProduct: Product) => {
 const ShopPage = () => {
     const [activeCategory, setActiveCategory] = useState("All");
     const [selectedProduct, setSelectedProduct] = useState<Product | null>(null);
+    const { ref, isVisible } = useInViewAnimation();
 
     const { productID } = useParams();
     useEffect(() => {
@@ -76,16 +68,16 @@ const ShopPage = () => {
             : shopItems.filter((item) => item.category === activeCategory);
 
     return (
-        <section className="shop-page">
-            <header className="page-title">
+        <section className={`shop-page animate fade-up ${isVisible && "visible"}`}>
+            <header ref={ref} className="page-title">
                 <h1>Shop Inventory</h1>
                 <p>All items are available <span>in-store only</span>. Visit us for pricing and availability.</p>
             </header>
 
             <div className="shop-layout">
                 {/* Sidebar */}
-                <aside className="shop-sidebar">
-                    <h3>Categories</h3>
+                <aside className={`shop-sidebar delay-animate fade-up ${isVisible && "visible"}`}>
+                    <h2>Categories</h2>
                     <ul>
                         {categories.map((cat) => (
                             <li
@@ -98,7 +90,6 @@ const ShopPage = () => {
                         ))}
                     </ul>
                 </aside>
-                {/* Inventory */}
                 <div className="shop-main">
                     {/* HEADER ABOVE GRID */}
                     {
@@ -111,7 +102,7 @@ const ShopPage = () => {
                                 </h2>
                             </div>
                             :
-                            <div className="shop-header">
+                            <div className={`shop-header delay-animate slide-left ${isVisible && "visible"}`} >
                                 <h2>Showing {activeCategory}</h2>
                             </div>
                     }
@@ -119,23 +110,30 @@ const ShopPage = () => {
                     <div className="shop-grid">
                         {
                             !selectedProduct &&
-                            filteredItems.map((item) => (
-                                <div
-                                    key={item.id}
-                                    className={`shop-card ${item.available ? "" : "unavailable"}`}
-                                    onClick={() => setSelectedProduct(item)}
-                                >
-                                    <div className="shop-card-content">
-                                        <h3>{item.name}</h3>
-                                        <span className="category">{item.category}</span>
-                                        {item.available ? (
-                                            <span className="status available">Available In-Store</span>
-                                        ) : (
-                                            <span className="status unavailable">Currently Unavailable</span>
-                                        )}
-                                    </div>
-                                </div>
-                            ))
+                            filteredItems.map((item, index) => {
+                                const delay = 0.35 + Math.log(index + 1) * 0.20;
+                                return (
+                                    <div
+                                        className={`delay-animate slide-left ${isVisible && "visible"}`}
+                                        style={{ "--delay": `${delay}s` } as React.CSSProperties}
+                                    >
+                                        <div
+                                            key={item.id}
+                                            className={`shop-card  ${item.available ? "" : "unavailable"}`}
+                                            onClick={() => setSelectedProduct(item)}
+                                        >
+                                            <div className="shop-card-content">
+                                                <h3>{item.name}</h3>
+                                                <span className="category">{item.category}</span>
+                                                {item.available ? (
+                                                    <span className="status available">Available In-Store</span>
+                                                ) : (
+                                                    <span className="status unavailable">Currently Unavailable</span>
+                                                )}
+                                            </div>
+                                        </div>
+                                    </div>)
+                            })
                         }
                     </div>
                     {selectedProduct && (

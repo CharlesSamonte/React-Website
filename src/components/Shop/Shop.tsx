@@ -37,6 +37,9 @@ const Shop = () => {
                             )
                         })
                     }
+                <NavLink to="/shop">
+                <button className={`view-products-btn  delay-animate slide-left ${isVisible && "visible"}`}>View All Products</button>
+                </NavLink>
                 </div>
             </div>
         </section>

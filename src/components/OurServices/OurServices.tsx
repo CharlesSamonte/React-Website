@@ -1,5 +1,7 @@
 import "./OurServices.css"
 import useInViewAnimation from "../../hooks/useInViewAnimation";
+import { servicesHighlight } from "../../constants";
+import { NavLink } from "react-router-dom";
 
 const OurServices = () => {
     const { ref, isVisible } = useInViewAnimation();
@@ -10,43 +12,31 @@ const OurServices = () => {
         >
             <div className="section-title-container">
                 <h1>Our Services</h1>
-                <a href="" id="view-all-services" className="a-link">View All Services</a>
+                <a href="/services" id="view-all-services" className="a-link">View All Services</a>
             </div>
             <div className="services-container">
-                <div className={`card-wrapper slide-left delay-animate ${isVisible ? "visible" : ""}`}
-                    style={{ "--delay": `${0.35}s` } as React.CSSProperties}
-                >
-                    <div className={`service-card card`}>
-                        <div className="img-container">
-                            <img loading="lazy" src="/assets/services/auto-body-repair.png" alt="Auto Body Repair">
-                            </img>
-                        </div>
-                        <h3>Automotive Services</h3>
-                        <p>Expert collision repair and paint services to restore your vehicle to its original condition.</p>
-                    </div>
-                </div>
-                <div className={`card-wrapper slide-left  delay-animate ${isVisible ? "visible" : ""}`}
-                    style={{ "--delay": `${0.50}s` } as React.CSSProperties}
-                >
-                    <div className={`service-card card`}>
-                        <div className="img-container">
-                            <img loading="lazy" src="/assets/services/engine-repair.png" alt="Engine Repair"></img>
-                        </div>
-                        <h3>Engine Repair</h3>
-                        <p>Professional engine diagnostics and repair services to keep your vehicle running smoothly.</p>
-                    </div>
-                </div>
-                <div className={`card-wrapper slide-left  delay-animate ${isVisible ? "visible" : ""}`}
-                    style={{ "--delay": `${0.60}s` } as React.CSSProperties}
-                >
-                    <div className={`service-card card`}>
-                        <div className="img-container">
-                            <img loading="lazy" src="/assets/services/4x4-setup.png" alt="4x4setup"></img>
-                        </div>
-                        <h3>4x4 Setup and Overloading Setup</h3>
-                        <p>Tailored fabrication solutions to meet your unique vehicle needs and specifications.</p>
-                    </div>
-                </div>
+                {
+                    servicesHighlight.map((service, index) => {
+                        const delay = 0.35 + Math.log(index + 1) * 0.20;
+
+                        return (
+                            <div key={index} className={`card-wrapper slide-left delay-animate ${isVisible ? "visible" : ""}`}
+                                style={{ "--delay": `${delay}s` } as React.CSSProperties}
+                            >
+                                <NavLink  to="/services">
+                                    <div className={`service-card card`}>
+                                        <div className="img-container">
+                                            <img loading="lazy" src={service.imgPath} alt="Auto Body Repair">
+                                            </img>
+                                        </div>
+                                        <h3>{service.title}</h3>
+                                        <p>{service.subTitle}</p>
+                                    </div>
+                                </NavLink>
+                            </div>
+                        )
+                    })
+                }
             </div>
         </section >
     );

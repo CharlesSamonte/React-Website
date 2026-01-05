@@ -2,12 +2,13 @@ import "./Contact.css";
 import { contactInfo } from "../constants/";
 import fbIcon from "/src/assets/icons/facebook-logo.svg";
 import igIcon from "/src/assets/icons/instagram-logo.svg";
+import useInViewAnimation from "../hooks/useInViewAnimation";
 
 const ContactPage = () => {
+  const { ref, isVisible } = useInViewAnimation();
   return (
-    <section id="contact-page">
-      {/* HEADER */}
-      <header className="contact-header">
+    <section id={`contact-page`} className={`animate fade-up ${isVisible && "visible"}`}>
+      <header ref={ref} className="contact-header">
         <h1>Contact Us</h1>
         <p>
           Get in touch with AutoCradle Auto Shop for expert automotive services,
@@ -15,8 +16,7 @@ const ContactPage = () => {
         </p>
       </header>
       <div className="contact-grid">
-        {/* CONTACT INFO */}
-        <div className="contact-info">
+        <div className={`contact-info delay-animate fade-up ${isVisible && "visible"}`}>
           <h2>Get In Touch</h2>
 
           <p><strong>Phone:</strong> <a href={`tel:${contactInfo.phone}`}>{contactInfo.phone}</a></p>
@@ -47,7 +47,8 @@ const ContactPage = () => {
         </div>
 
         {/* CONTACT FORM */}
-        <form className="contact-form">
+        <form className={`contact-form delay-animate fade-up ${isVisible && "visible"}`}
+        >
           <h2>Send Us a Message</h2>
 
           <input type="text" placeholder="Your Name" required />
