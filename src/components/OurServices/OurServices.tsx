@@ -5,10 +5,10 @@ const OurServices = () => {
         <section id="our-services-section">
             <div className="section-title-container">
                 <h1>Our Services</h1>
-                <a href="" id="view-all-services">View All Services</a>
+                <a href="" id="view-all-services" className="a-link">View All Services</a>
             </div>
             <div className="services-container">
-                <div className="service-card">
+                <div className="service-card card">
                     <div className="img-container">
                         <img loading="lazy" src="/src/assets/services/auto-body-repair.png" alt="Auto Body Repair">
                         </img>
@@ -16,14 +16,14 @@ const OurServices = () => {
                     <h3>Automotive Services</h3>
                     <p>Expert collision repair and paint services to restore your vehicle to its original condition.</p>
                 </div>
-                <div className="service-card">
+                <div className="service-card card">
                     <div className="img-container">
                         <img loading="lazy" src="/src/assets/services/engine-repair.png" alt="Engine Repair"></img>
                     </div>
                     <h3>Engine Repair</h3>
                     <p>Professional engine diagnostics and repair services to keep your vehicle running smoothly.</p>
                 </div>
-                <div className="service-card">
+                <div className="service-card card">
                     <div className="img-container">
                         <img loading="lazy" src="/src/assets/services/4x4-setup.png" alt="4x4setup"></img>
                     </div>

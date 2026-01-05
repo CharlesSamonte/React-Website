@@ -5,9 +5,7 @@ import CustomerReview from './CustomerReview/CustomerReview';
 import OurServices from './OurServices/OurServices';
 import Contact from './Contact/Contact';
 import Footer from './Footer/Footer';
-// import Sidebar from './Sidebar';
-// import Button from './Button';
-// import Card from './Card';
+import Shop from './Shop/Shop';
 
 export {
     Navbar,
@@ -17,7 +15,5 @@ export {
     OurServices,
     Contact,
     Footer,
-    // Sidebar,
-    // Button,
-    // Card,
+    Shop,
 };

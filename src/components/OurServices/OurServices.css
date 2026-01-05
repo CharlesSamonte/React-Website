@@ -36,14 +36,3 @@
     text-wrap: nowrap;
     flex-wrap: wrap;
 }
-
-#view-all-services {
-    text-decoration: underline !important;
-    font-weight: 300;
-    font-size: 0.9em;
-    color: var(--color-text-sub);
-}
-
-#view-all-services:hover {
-    color: var(--color-text);
-}

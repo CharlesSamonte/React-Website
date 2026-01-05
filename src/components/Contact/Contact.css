@@ -20,13 +20,13 @@
 }
 
 
-.cards-container {
+.contact-container {
     display: flex;
     flex-wrap: wrap;
     gap: 2rem;
 }
 
-.cards-container .card {
+.contact-container .contact-div {
     flex: 1;
     background-color: var(--card-backgound-color);
     border-radius: var(--radius-md);
@@ -34,33 +34,33 @@
     overflow: hidden;
 }
 
-.cards-container .card .card-title-sub h3 {
+.contact-container .contact-div .card-title-sub h3 {
     margin: 0;
 }
 
-.cards-container .card #card-contacts-list p {
+.contact-container .contact-div #card-contacts-list p {
     color: var(--color-text);
     display: flex;
     gap: 1rem;
     align-items: center;
 }
 
-.cards-container .card #card-contacts-list svg {
+.contact-container .contact-div #card-contacts-list svg {
     height: 20px;
     width: 20px;
 }
 
-.cards-container .card #card-contacts-list .socials-list {
+.contact-container .contact-div #card-contacts-list .socials-list {
     display: flex;
     flex-direction: row;
     gap: 0.5rem;
 }
 
-.cards-container .card #card-contacts-list .socials-list img {
+.contact-container .contact-div #card-contacts-list .socials-list img {
     height: 32px;
 }
 
-.cards-container .card #card-contacts-list .socials-list img:hover {
+.contact-container .contact-div #card-contacts-list .socials-list img:hover {
     opacity: 0.8;
 }
 

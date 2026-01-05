@@ -10,12 +10,31 @@
   color: var(--main-backgound-color);
   font-weight: 700;
   border: 1px solid var(--color-secondary);
-
 }
 
 .gold-btn:hover {
   border-color: var(--color-text);
   color: var(--section-backgound-color);
+}
+
+.card {
+  transition: box-shadow 0.5s ease, transform 0.5s ease;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.5);
+}
+
+.a-link {
+  text-decoration: underline !important;
+  font-weight: 300;
+  font-size: 0.9em;
+  color: var(--color-text-sub);
+}
+
+.a-link:hover {
+  color: var(--color-text);
 }
 
 .text-sub {
@@ -26,7 +45,7 @@
   opacity: 0;
 }
 
-.animate.visible{
+.animate.visible {
   opacity: 1;
 }
 

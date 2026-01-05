@@ -1,5 +1,14 @@
 import './App.css'
-import { Navbar, Hero, About, CustomerReview, OurServices, Contact, Footer } from './components'
+import {
+  Navbar,
+  Hero,
+  About,
+  CustomerReview,
+  OurServices,
+  Contact,
+  Footer,
+  Shop
+} from './components'
 
 function App() {
   return (
@@ -9,6 +18,7 @@ function App() {
       <About />
       <CustomerReview />
       <OurServices />
+      <Shop />
       <Contact />
       <Footer />
     </>
