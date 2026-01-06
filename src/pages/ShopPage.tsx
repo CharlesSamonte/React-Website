@@ -77,10 +77,10 @@ const ShopPage = () => {
                 {/* Sidebar */}
                 <aside className={`shop-sidebar delay-animate fade-up ${isVisible && "visible"}`}>
                     <h2>Categories</h2>
-                    <ul>
-                        {categories.map((cat) => (
+                    <ul className="horizontal-scroll">
+                        {categories.map((cat, index) => (
                             <li
-                                key={cat}
+                                key={index}
                                 className={activeCategory === cat ? "active" : ""}
                                 onClick={() => setActiveCategory(cat)}
                             >
@@ -113,6 +113,7 @@ const ShopPage = () => {
                                 const delay = 0.35 + Math.log(index + 1) * 0.20;
                                 return (
                                     <div
+                                        key={index}
                                         className={`delay-animate slide-left ${isVisible && "visible"}`}
                                         style={{ "--delay": `${delay}s` } as React.CSSProperties}
                                     >

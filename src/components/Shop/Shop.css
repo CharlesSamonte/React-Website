@@ -121,12 +121,13 @@
 }
 
 .shop-sidebar li:hover {
-    color: var(--color-accent);
+    color: var(--color-text);
 }
 
 .shop-sidebar li.active {
     color: var(--color-accent);
     font-weight: 500;
+    border-bottom: 1px solid var(--color-accent);
 }
 
 /* ===============================
@@ -163,9 +164,33 @@
     }
 
     .shop-sidebar {
-        order: -1;
         border-right: none;
+        border-bottom: 1.2px solid var(--card-backgound-color);
+        width: 85vw;
     }
+
+    .shop-sidebar ul {
+        display: flex;
+        gap: 1rem;
+        text-wrap: nowrap;
+        overflow-x: scroll;
+        padding: 1rem 4px;
+        scroll-snap-type: mandatory;
+    }
+
+
+    .shop-sidebar ul {
+        display: flex;
+        gap: 1rem;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        background: linear-gradient(90deg,
+                var(--main-backgound-color) 0%,
+                var(--main-backgound-color) 70%,
+                var(--section-backgound-color) 100%);
+                border-right: 1px solid var(--card-backgound-color);
+    }
+
 
     .shop-header h1 {
         font-size: 2.1rem;
