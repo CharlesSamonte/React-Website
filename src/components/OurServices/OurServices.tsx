@@ -14,23 +14,23 @@ const OurServices = () => {
                 <h1>Our Services</h1>
                 <a href="/services" id="view-all-services" className="a-link">View All Services</a>
             </div>
-            <div className="services-container">
+            <div className="cards-container">
                 {
                     servicesHighlight.map((service, index) => {
                         const delay = 0.35 + Math.log(index + 1) * 0.20;
-
                         return (
                             <div key={index} className={`card-wrapper slide-left delay-animate ${isVisible ? "visible" : ""}`}
                                 style={{ "--delay": `${delay}s` } as React.CSSProperties}
                             >
-                                <NavLink  to="/services">
+                                <NavLink to="/services">
                                     <div className={`service-card card`}>
                                         <div className="img-container">
-                                            <img loading="lazy" src={service.imgPath} alt="Auto Body Repair">
+                                            <img loading="lazy" src={service.imgPath} alt={service.title}>
                                             </img>
                                         </div>
                                         <h3>{service.title}</h3>
                                         <p>{service.subTitle}</p>
+                                        <p className="sub-text text-cta">Click to see details</p>
                                     </div>
                                 </NavLink>
                             </div>

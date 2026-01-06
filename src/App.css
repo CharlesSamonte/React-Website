@@ -17,13 +17,48 @@
   color: var(--section-backgound-color);
 }
 
+.cards-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
 .card {
-  transition: box-shadow 0.5s ease, transform 0.5s ease;
+  background-color: var(--section-backgound-color);
+  border-radius: var(--radius-lg);
+  padding: 0.2rem 1.2rem;
+  transition: transform 0.4s ease, box-shadow 0.4s ease, border-color 0.4s ease;
+
 }
 
 .card:hover {
   transform: translateY(-8px);
   box-shadow: 0 15px 40px rgba(0, 0, 0, 0.5);
+  border-top: 1.5px solid var(--color-accent);
+}
+
+.card .img-container {
+  aspect-ratio: 1;
+  overflow: hidden;
+  margin: 1rem 0;
+  object-fit: cover;
+  border-radius: var(--radius-md);
+}
+
+.card .img-container img {
+  width: 100%;
+  aspect-ratio: 1;
+}
+
+.text-cta {
+  width: 100%;
+  text-align: end;
+  opacity: 0.5;
+}
+
+.text-cta:hover {
+  color: var(--color-text)
 }
 
 .a-link {
@@ -33,6 +68,22 @@
   color: var(--color-text-sub);
 }
 
+.section-title-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+  text-wrap: nowrap;
+  flex-wrap: wrap;
+}
+
+.section-title-container .title-sub-container {
+  text-wrap: wrap;
+}
+
+/*----------------------------------
+---------- ANIMATIONS --------------
+----------------------------------*/
 .a-link:hover {
   color: var(--color-text);
 }
@@ -54,7 +105,7 @@
   animation: slideLeft 0.7s ease forwards;
 }
 
-.delay-animate.visible{
+.delay-animate.visible {
   animation-delay: var(--delay, 0s);
 }
 

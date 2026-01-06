@@ -12,12 +12,15 @@ const Shop = () => {
         <section ref={ref} id="shop-section">
             <div className={`animate fade-up ${isVisible ? "visible" : ""}`}>
                 <div className="section-title-container">
-                    <h1>Shop Inventory</h1>
+                    <div className="title-sub-container">
+                        <h1>Shop Inventory</h1>
+                        <p>
+                            Select items available in-store. Visit us to place an order.
+                        </p>
+                    </div>
                     <NavLink to="/shop" id="" className="a-link">View All Shop Items</NavLink>
                 </div>
-                <p>
-                    Select items available in-store. Visit us to place an order.
-                </p>
+
                 <div className="shop-grid">
                     {
                         featuredShopItems.map((item, index) => {
@@ -27,6 +30,8 @@ const Shop = () => {
                                     <div className={`card-wrapper delay-animate slide-left ${isVisible ? "visible" : ""}`}
                                         style={{ "--delay": `${delay}s` } as React.CSSProperties}>
                                         <div className={`shop-card card`}>
+                                            <div className="img-container">
+                                            </div>
                                             <div className="shop-info">
                                                 <h3>{item.name}</h3>
                                                 <p>{item.description}</p>
@@ -37,10 +42,10 @@ const Shop = () => {
                             )
                         })
                     }
-                <NavLink to="/shop">
-                <button className={`view-products-btn  delay-animate slide-left ${isVisible && "visible"}`}>View All Products</button>
-                </NavLink>
                 </div>
+                <NavLink to="/shop">
+                    <button className={`view-products-btn  delay-animate slide-left ${isVisible && "visible"}`}>View All Products</button>
+                </NavLink>
             </div>
         </section>
     )

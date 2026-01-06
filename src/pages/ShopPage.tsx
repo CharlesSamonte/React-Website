@@ -1,5 +1,4 @@
 import { useState, useEffect } from "react";
-import "./Shop.css";
 import { shopItems } from "../constants/shopItems";
 import { useParams } from "react-router-dom";
 import useInViewAnimation from "../hooks/useInViewAnimation";
@@ -119,7 +118,7 @@ const ShopPage = () => {
                                     >
                                         <div
                                             key={item.id}
-                                            className={`shop-card  ${item.available ? "" : "unavailable"}`}
+                                            className={`shop-card card ${item.available ? "" : "unavailable"}`}
                                             onClick={() => setSelectedProduct(item)}
                                         >
                                             <div className="shop-card-content">

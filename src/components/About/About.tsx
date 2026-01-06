@@ -16,7 +16,7 @@ const About = () => {
                 <h2 className={`sub-name gold-text animate fade-up ${isVisible ? "visible" : ""}`}>
                     {aboutUsText.header}
                 </h2>
-                <p className={`animate fade-up ${isVisible ? "visible" : ""}`}>
+                <p className={`about-text animate fade-up ${isVisible ? "visible" : ""}`}>
                     {aboutUsText.text}
                 </p>
                 <button className={`gold-btn animate fade-up ${isVisible ? "visible" : ""}`}>OUR SERVICES</button>
